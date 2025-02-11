@@ -11,4 +11,4 @@ def get_days_from_today(date: str):
 
 
 if __name__ == '__main__':
-    get_days_from_today('1951-03-27')
+    get_days_from_today('1984-05-20')

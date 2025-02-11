@@ -1,6 +1,6 @@
 def normalize_phone(phone_numbers: list):
 
-    char_set = frozenset('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
+    char_set = set('0123456789')
     normalize_number = ''
     normalize_numbers = []
 

@@ -13,4 +13,4 @@ def get_numbers_ticket(min: int, max: int, quantity: int):
 
 
 if __name__ == '__main__':
-    get_numbers_ticket(1, 48, 8)
+    get_numbers_ticket(1, 36, 6)
