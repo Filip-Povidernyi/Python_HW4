@@ -1,17 +1,27 @@
 def normalize_phone(phone_numbers: list):
-    char_set = frozenset('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
+
+    char_set = set('0123456789')
     normalize_number = ''
     normalize_numbers = []
+
     for number in (phone_numbers):
+
         for char in number:
+
             if char in char_set:
+
                 normalize_number += char
+
         if len(normalize_number) == 12:
+
             normalize_numbers.append(f'+{normalize_number}')
+
         elif len(normalize_number) == 10:
+
             normalize_numbers.append(f'+38{normalize_number}')
         normalize_number = ''
-    print(normalize_numbers)
+
+    return normalize_numbers
 
 
 if __name__ == '__main__':
