@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 
 
-def get_upcoming_birthdays(users):
+def get_upcoming_birthdays(users: list):
 
     upcoming_birthdays_list = []
     today = datetime.now().date()
