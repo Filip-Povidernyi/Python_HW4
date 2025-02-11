@@ -38,17 +38,17 @@ def get_upcoming_birthdays(users: list):
     return upcoming_birthdays_list
 
 
-users = [{'name': 'Kolya', 'birthday': "1991.02.10"},
-         {'name': 'Ivan', 'birthday': "1987.02.11"},
-         {'name': 'Peter', 'birthday': "1964.02.12"},
-         {'name': 'Jack', 'birthday': "1999.02.13"},
-         {'name': 'Olya', 'birthday': "1997.02.14"},
-         {'name': 'Slava', 'birthday': "1986.02.15"},
-         {'name': 'Serg', 'birthday': "1974.02.16"},
-         {'name': 'Alex', 'birthday': "1996.02.17"},
-         {'name': 'Pavel', 'birthday': "1998.02.18"}]
-
-
 if __name__ == '__main__':
+
+    users = [{'name': 'Kolya', 'birthday': "1991.02.10"},
+             {'name': 'Ivan', 'birthday': "1987.02.11"},
+             {'name': 'Peter', 'birthday': "1964.02.12"},
+             {'name': 'Jack', 'birthday': "1999.02.13"},
+             {'name': 'Olya', 'birthday': "1997.02.14"},
+             {'name': 'Slava', 'birthday': "1986.02.15"},
+             {'name': 'Serg', 'birthday': "1974.02.16"},
+             {'name': 'Alex', 'birthday': "1996.02.17"},
+             {'name': 'Pavel', 'birthday': "1998.02.18"}]
+
     upcoming_birthdays = get_upcoming_birthdays(users)
     print("Список привітань на цьому тижні:", upcoming_birthdays)
