@@ -4,13 +4,21 @@ from datetime import datetime, timedelta
 def get_upcoming_birthdays(users: list):
 
     upcoming_birthdays_list = []
-    today = datetime.now().date()
+    today = datetime.now.date()
 
     for user in users:
 
         birthday_date = datetime.strptime(user["birthday"], "%Y.%m.%d").date()
-        birthday_date_this_year = datetime(
-            year=today.year, month=birthday_date.month, day=birthday_date.day).date()
+
+        if (today.month == 12) and (datetime(birthday_date.year, 1, 1).date() <= birthday_date < datetime(birthday_date.year, 1, 7).date()):
+
+            birthday_date_this_year = datetime(
+                year=(today.year + 1), month=birthday_date.month, day=birthday_date.day).date()
+
+        else:
+
+            birthday_date_this_year = datetime(
+                year=today.year, month=birthday_date.month, day=birthday_date.day).date()
 
         if birthday_date_this_year < today:
 
@@ -46,9 +54,9 @@ if __name__ == '__main__':
              {'name': 'Jack', 'birthday': "1999.02.13"},
              {'name': 'Olya', 'birthday': "1997.02.14"},
              {'name': 'Slava', 'birthday': "1986.02.15"},
-             {'name': 'Serg', 'birthday': "1974.02.16"},
-             {'name': 'Alex', 'birthday': "1996.02.17"},
-             {'name': 'Pavel', 'birthday': "1998.02.18"}]
+             {'name': 'Serg', 'birthday': "1974.12.31"},
+             {'name': 'Alex', 'birthday': "1996.01.02"},
+             {'name': 'Pavel', 'birthday': "1998.01.05"}]
 
     upcoming_birthdays = get_upcoming_birthdays(users)
     print("Список привітань на цьому тижні:", upcoming_birthdays)
